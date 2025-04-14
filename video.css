@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+.video-container {
+  text-align: center;
+}
+#videoPlayer {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+}
+.ad-container {
+  margin-top: 10px;
+}
+.ad-image {
+  width: 100%;
+  max-width: 468px;
+  height: auto;
+}

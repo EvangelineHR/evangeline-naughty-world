@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player with Ad</title>
+  <!-- OpenGraph Metadata for X -->
+  <meta name="twitter:card" content="player">
+  <meta name="twitter:site" content="@thaelpathrising">
+  <meta name="twitter:title" content="My Awesome Video">
+  <meta name="twitter:description" content="Watch this cool video hosted on S3!">
+  <meta name="twitter:image" content="https://your-website.com/thumbnail.jpg">
+  <meta name="twitter:player" content="https://your-website.com/player.html">
+  <meta name="twitter:player:width" content="640">
+  <meta name="twitter:player:height" content="360">
+  <meta name="twitter:player:stream" content="https://your-bucket-name.s3.amazonaws.com/myvideo.mp4">
+  <meta name="twitter:player:stream:content_type" content="video/mp4">
+  <link rel="stylesheet" href="video.css">
+</head>
+<body>
+  <div class="video-container">
+    <video id="videoPlayer" controls>
+      <source src="https://imagestoragebucketmdb.s3.us-east-1.amazonaws.com/VID_20231117_112410_xbjvyu.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="ad-container">
+      <script type="text/javascript">
+    atOptions = {
+        'key' : '5f17919aaa3a1db2a63baf297a896018',
+        'format' : 'iframe',
+        'height' : 60,
+        'width' : 468,
+        'params' : {}
+    };
+</script>
+      </a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
