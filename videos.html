@@ -4,30 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Player with Ad</title>
-  <!-- OpenGraph Metadata for X -->
-  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://x.com; media-src 'self' https://fuckmywife.top;">
+  <!-- CSP to Allow X Framing -->
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://x.com;">
+  <!-- Twitter Card Metadata -->
   <meta name="twitter:card" content="player">
-  <meta name="twitter:site" content="@thaelpathrising">
-  <meta name="twitter:title" content="My Awesome Video">
-  <meta name="twitter:description" content="Watch this cool video hosted on S3!">
+  <meta name="twitter:site" content="@yourXhandle">
+  <meta name="twitter:title" content="My Video">
+  <meta name="twitter:description" content="Watch this video hosted on my site!">
   <meta name="twitter:image" content="https://fuckmywife.top/thumbnail.jpg">
   <meta name="twitter:player" content="https://fuckmywife.top/videos.html">
   <meta name="twitter:player:width" content="640">
   <meta name="twitter:player:height" content="360">
   <meta name="twitter:player:stream" content="https://fuckmywife.top/vid.mp4">
   <meta name="twitter:player:stream:content_type" content="video/mp4">
-  <link rel="stylesheet" href="video.css">
+  <link rel="stylesheet" href="https://fuckmywife.top/styles.css">
 </head>
 <body>
   <div class="video-container">
-    <video id="videoPlayer" controls width="640" height="360">
-      <script type='text/javascript' src='//pl26222691.profitableratecpm.com/c8/a9/d7/c8a9d7388459446405f208161739cca5.js'></script>
-      <source src="https://fuckmywife.top/vid.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <iframe
+      src="https://fuckmywife.top/video-player.html"
+      width="640"
+      height="360"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
     <div class="ad-container">
-      <!-- Fix the script tag if needed -->
+      <a href="https://example.com/ad" target="_blank">
+        <img src="https://fuckmywife.top/ad-banner.jpg" alt="Advertisement" class="ad-image">
+      </a>
     </div>
   </div>
+  <script src="https://fuckmywife.top/script.js"></script>
 </body>
 </html>
