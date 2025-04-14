@@ -1,24 +1,24 @@
 // Show age warning popup on page load
-document.addEventListener('DOMContentLoaded', function() {
-    const ageWarning = document.getElementById('ageWarning');
-    const pageContent = document.getElementById('pageContent');
-    const yesBtn = document.getElementById('yesBtn');
-    const noBtn = document.getElementById('noBtn');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const ageWarning = document.getElementById('ageWarning');
+//     const pageContent = document.getElementById('pageContent');
+//     const yesBtn = document.getElementById('yesBtn');
+//     const noBtn = document.getElementById('noBtn');
 
-    if (ageWarning && pageContent) {
-        ageWarning.style.display = 'flex'; // Show popup
-        pageContent.style.display = 'none'; // Hide content initially
+//     if (ageWarning && pageContent) {
+//         ageWarning.style.display = 'flex'; // Show popup
+//         pageContent.style.display = 'none'; // Hide content initially
 
-        yesBtn.addEventListener('click', function() {
-            ageWarning.style.display = 'none';
-            pageContent.style.display = 'block';
-        });
+//         yesBtn.addEventListener('click', function() {
+//             ageWarning.style.display = 'none';
+//             pageContent.style.display = 'block';
+//         });
 
-        noBtn.addEventListener('click', function() {
-            window.location.href = 'https://www.google.com';
-        });
-    }
-});
+//         noBtn.addEventListener('click', function() {
+//             window.location.href = 'https://www.google.com';
+//         });
+//     }
+// });
 
 // Toggle hamburger menu on all pages
 document.querySelector('.hamburger').addEventListener('click', function() {
