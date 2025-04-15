@@ -11,16 +11,32 @@ document.querySelectorAll('.copy-btn').forEach(button => {
     button.addEventListener('click', function() {
         const shareLink = this.closest('.share-box').querySelector('.share-link');
         shareLink.select();
-        try {
+        shareLink.setSelectionRange(0, 99999); // For mobile browsers
+
+        // Try modern clipboard API first
+        if (navigator.clipboard) {
             navigator.clipboard.write(shareLink.value).then(() => {
                 alert('Link copied to clipboard!');
             }).catch(err => {
-                console.error('Copy failed:', err);
-                alert('Failed to copy link. Please copy manually.');
+                console.error('Clipboard API failed:', err);
+                // Fallback to execCommand
+                try {
+                    document.execCommand('copy');
+                    alert('Link copied to clipboard!');
+                } catch (fallbackErr) {
+                    console.error('ExecCommand failed:', fallbackErr);
+                    alert('Failed to copy link. Please select and copy manually: ' + shareLink.value);
+                }
             });
-        } catch (err) {
-            console.error('Copy failed:', err);
-            alert('Failed to copy link. Please copy manually.');
+        } else {
+            // Fallback for older browsers without clipboard API
+            try {
+                document.execCommand('copy');
+                alert('Link copied to clipboard!');
+            } catch (err) {
+                console.error('ExecCommand failed:', err);
+                alert('Failed to copy link. Please select and copy manually: ' + shareLink.value);
+            }
         }
     });
 });
