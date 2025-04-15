@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.top-bar {
+    background-color: #ff0066;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #cc0052;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.videos {
+    max-width: 1200px;
+    margin: 80px auto 20px;
+    padding: 20px;
+}
+
+.videos h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff0066;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.video-card {
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    max-width: 600px; /* Smaller card width like xHamster/XVideos */
+}
+
+.video-card:hover {
+    transform: translateY(-3px);
+}
+
+.video-image {
+    width: 100%;
+    height: 180px; /* Reduced for compact xHamster/XVideos style */
+}
+
+.video-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-details {
+    padding: 10px; /* Tighter padding */
+}
+
+.video-details h3 {
+    font-size: 1.3em; /* Slightly smaller title */
+    color: #ff0066;
+    margin-bottom: 8px;
+}
+
+.video-details p {
+    font-size: 0.9em; /* Smaller description text */
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+.video-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.share-btn, .download-btn, .copy-btn {
+    background-color: #ff0066;
+    color: #fff;
+    border: none;
+    padding: 6px 12px; /* Smaller buttons */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.3s;
+}
+
+.share-btn:hover, .download-btn:hover, .copy-btn:hover {
+    background-color: #cc0052;
+}
+
+.share-box {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.share-link {
+    width: 100%;
+    max-width: 250px; /* Slightly smaller input */
+    padding: 6px;
+    background-color: #3a3a3a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff0066;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #ff0066;
+        padding: 10px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .video-image {
+        height: 120px; /* Even smaller on mobile */
+    }
+
+    .video-card {
+        max-width: 100%; /* Full-width on mobile */
+    }
+
+    .share-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .share-link {
+        max-width: 100%;
+    }
+}
