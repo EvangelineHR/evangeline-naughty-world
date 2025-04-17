@@ -379,3 +379,35 @@ footer {
         width: 100px;
     }
 }
+
+.coffee-links {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coffee-links p {
+    font-size: 1.1em;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.coffee-links .coffee-btn {
+    display: inline-block;
+    background-color: #ff0066;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.coffee-links .coffee-btn:hover {
+    background-color: #cc0052;
+}
