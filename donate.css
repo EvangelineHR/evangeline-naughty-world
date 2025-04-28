@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.top-bar {
+    background-color: #ff0066;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #cc0052;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.donate {
+    max-width: 1200px;
+    margin: 80px auto 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.donate h2 {
+    font-size: 2em;
+    color: #ff0066;
+    margin-bottom: 15px;
+}
+
+.donate-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.donate-content p {
+    font-size: 1em;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.qr-code {
+    margin: 20px 0;
+}
+
+.qr-code img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #555;
+    object-fit: contain;
+}
+
+.upi-link {
+    color: #ff0066;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.upi-link:hover {
+    color: #cc0052;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #ff0066;
+        padding: 10px 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .donate {
+        margin: 70px 10px 20px;
+        padding: 15px;
+    }
+
+    .qr-code img {
+        width: 200px;
+        height: 200px;
+    }
+}
